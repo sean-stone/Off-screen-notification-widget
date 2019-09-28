@@ -1,0 +1,77 @@
+html,
+body,
+#viewDiv {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: #cfd3d4;
+}
+
+.overview {
+    position: absolute;
+    bottom: 28px;
+    right: 18px;
+    width: 200px;
+    height: 200px;
+    z-index: 2;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: #1d2224;
+}
+
+#extentDiv {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 2;
+    -webkit-box-shadow: 0px 0px 48px -6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 48px -6px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 48px -6px rgba(0, 0, 0, 0.75);
+}
+
+#overview-padding {
+    box-shadow: 0 0 0 1px silver,
+        0 0 0 8px white,
+        0 0 0 1px black;
+    background-color: transparent;
+}
+
+#center {
+    position: absolute;
+    z-index: 10;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-color: white;
+    right: 109px;
+    bottom: 119px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+
+#center-point {
+    position: relative;
+    transform-origin: 5px 5px;
+    transform: rotate(45deg);
+    width: 111px;
+    height: 10px;
+    margin-top: 3px;
+    margin-left: -4px;
+    background-color: transparent;
+    display: "none"
+}
+
+#point {
+    height: 20px;
+    width: 20px;
+    margin-top: -5px;
+    background-color: steelblue;
+    right: 0px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10;
+    box-shadow: 0 0 0 1px silver,
+        0 0 0 4px rgb(255, 255, 255)
+}
