@@ -55,7 +55,7 @@ require([
         document.getElementById("center-point").addEventListener("click", goToPoint);
 
         // animating point
-        var num = 0 // frame counter
+        var num = 0; // frame counter
 
         // starting point a and b for animating point
         var pointA = [-0.7986251, 51.8175963];
@@ -72,7 +72,7 @@ require([
             lattDifference = pointB[1] - pointA[1];
         }
 
-        requestAnimationFrame(animatePoint)
+        requestAnimationFrame(animatePoint);
 
         function animatePoint() {
             alertPoints.graphics.removeAll();
@@ -81,23 +81,23 @@ require([
             addPoints(pointA[0] + (longDifference / 500) * num, pointA[1] + (lattDifference / 500) * num);
 
             if (num < 500) {
-                num ++
+                num ++;
             } else {
                 updateLocation(pointA, pointB);
-                num = 0
+                num = 0;
             }
             updateOverview();
             requestAnimationFrame(animatePoint);
-        }
+        };
 
         function addPoints(long, lat) {
-            addGraphics.point(alertPoints, [long, lat])
-            addGraphics.point(alertPointsB, [long, lat])
+            addGraphics.point(alertPoints, [long, lat]);
+            addGraphics.point(alertPointsB, [long, lat]);
         };
 
         function goToPoint() {
-            mainView.goTo(alertPoints.graphics.items[0].geometry)
-        }
+            mainView.goTo(alertPoints.graphics.items[0].geometry);
+        };
         // finish setup of animating points
 
         function updateOverview() {
@@ -123,14 +123,13 @@ require([
             var circle = new Circle({
                 center: center,
                 radius: Math.round(widthInKM) //widthInKM
-
             });
 
-            var path = []
+            var path = [];
 
             for (i = 0; i < circle.rings[0].length; i++) {
-                path.push(convertxy(circle.rings[0][i][0], circle.rings[0][i][1]))
-            }
+                path.push(convertxy(circle.rings[0][i][0], circle.rings[0][i][1]));
+            };
 
             var polygonGraphic = new Graphic({
                 geometry: {
